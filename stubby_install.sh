@@ -14,16 +14,12 @@ rm -f /opt/etc/stubby/stubby.yml
 rm -f /opt/etc/stubby/stubby.yml.default
 
 echo "[3/5] Download file dari repo..."
-mkdir -p /opt/etc/init.d
-mkdir -p /opt/etc/stubby
-mkdir -p /opt/var/lib/stubby
-
 if command -v curl >/dev/null 2>&1; then
-  curl -L -o /opt/etc/init.d/S61stubby $REPO/S61stubby
-  curl -L -o /opt/etc/stubby/stubby.yml $REPO/stubby.yml
+  curl -L -o /opt/etc/init.d/S61stubby $REPO/opt/etc/init.d/S61stubby
+  curl -L -o /opt/etc/stubby/stubby.yml $REPO/opt/etc/stubby/stubby.yml
 else
-  wget -O /opt/etc/init.d/S61stubby $REPO/S61stubby
-  wget -O /opt/etc/stubby/stubby.yml $REPO/stubby.yml
+  wget -O /opt/etc/init.d/S61stubby $REPO/opt/etc/init.d/S61stubby
+  wget -O /opt/etc/stubby/stubby.yml $REPO/opt/etc/stubby/stubby.yml
 fi
 
 chmod +x /opt/etc/init.d/S61stubby
