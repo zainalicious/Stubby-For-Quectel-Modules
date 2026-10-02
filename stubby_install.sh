@@ -36,10 +36,8 @@ sed -i '/^server=127.0.0.1/d' $DNSMASQ_CONF
 echo "no-resolv" >> $DNSMASQ_CONF
 echo "server=127.0.0.1" >> $DNSMASQ_CONF
 
-echo "[5/5] Restart service..."
-/opt/etc/init.d/S61stubby restart
-/etc/init.d/dnsmasq restart 2>/dev/null
-/etc/init.d/S60dnsmasq restart 2>/dev/null
+echo "[5/5] Start service..."
+/opt/etc/init.d/S61stubby start
 
 echo ""
 echo "[OK] Selesai!"
