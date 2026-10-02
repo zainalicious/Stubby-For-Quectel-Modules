@@ -41,4 +41,4 @@ echo "  Binary : /opt/sbin/stubby (dari opkg)"
 echo "  Init   : /opt/etc/init.d/S61stubby (dari repo)"
 echo "  Config : /opt/etc/stubby/stubby.yml (dari repo)"
 echo ""
-cat $DNSMASQ_CONF
+tail -10 $DNSMASQ_CONF
