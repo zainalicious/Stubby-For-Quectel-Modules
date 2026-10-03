@@ -5,6 +5,8 @@
 REPO="https://raw.githubusercontent.com/zainalicious/Stubby-For-Quectel-Modules/main"
 DNSMASQ_CONF="/etc/data/dnsmasq.conf"
 
+set -e
+
 echo "[1/5] Install stubby dari Entware..."
 opkg update
 opkg install stubby
